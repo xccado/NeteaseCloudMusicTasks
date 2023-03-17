@@ -676,7 +676,7 @@ docker exec -it qinglong bash
 ### 拉取代码
 
 ```shell
-ql repo https://github.com/chen310/NeteaseCloudMusicTasks.git "index.py" "" "py"
+ql repo https://github.com/xccado/NeteaseCloudMusicTasks.git "index.py" "" "py"
 ```
 
 ### 安装依赖

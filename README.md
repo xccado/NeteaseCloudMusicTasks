@@ -36,23 +36,23 @@
 
 在腾讯云[API 密钥管理](https://console.cloud.tencent.com/cam/capi)新建密钥，获取 SecretId 和 SecretKey
 
-![Fork](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/getsecret.png)
+![Fork](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/getsecret.png)
 
 ### fork 本项目
 
-在 GitHub 上 fork [本项目](https://github.com/chen310/NeteaseCloudMusicTasks)
+在 GitHub 上 fork [本项目](https://github.com/xccado/NeteaseCloudMusicTasks)
 
-![Fork](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/fork.png)
+![Fork](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/fork.png)
 
 ### 创建 Secrets
 
 fork 之后，点击右上方 `settings`
 
-![Settings](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/settings.png)
+![Settings](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/settings.png)
 
 在页面点击 `Secrets`，点击 `Actions`，然后点击 `New repository secret` 创建新的 secret。
 
-![NewSecrets](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/newsecrets.png)
+![NewSecrets](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/newsecrets.png)
 
 | Name          | Value                     | 是否必填 |
 | :------------ | :------------------------ | :------- |
@@ -64,15 +64,15 @@ fork 之后，点击右上方 `settings`
 
 先填写先前获取的 SECRET_ID
 
-![SECRET_ID](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/secretid.png)
+![SECRET_ID](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/secretid.png)
 
 同理，填写先前获取的 SECRET_KEY
 
-![SECRET_KEY](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/secretkey.png)
+![SECRET_KEY](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/secretkey.png)
 
 CRON 默认为 `0 35 8 * * * *` 表示每天 8 点 35 分触发。如需更改，则如下图所示创建此 secret，。比如：`0 20 12 * * * *` 表示每天 12 点 20 分触发，`0 0 12,16 * * * *` 表示每天 12 点和 16 点各触发一次。
 
-![Cron](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/cron.png)
+![Cron](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/cron.png)
 
 FUNCTION_NAME 为函数名，不填写默认为 `NeteaseCloudMusicTasks`。如需更改，则创建此 secret，并填写自定义的函数名，命名规则：只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60 个字符。
 
@@ -80,71 +80,71 @@ REGION 默认为 `ap-guangzhou` ，可选的地域详见[地域列表](https://c
 
 添加完毕可以看到
 
-![Cron](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/secretlist.png)
+![Cron](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/secretlist.png)
 
 ### 部署
 
 击项目上方的 `Actions`
 
-![Actions](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/actions.png)
+![Actions](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/actions.png)
 
 点击 `All workflows` 下方的 `deploy`（移动端要先点击 `Select workflow`），再点击右侧 `Run workflow`，在弹出的页面再次点击 `Run workflow`，将会运行新的 workflow
 
-![RunWorkflow](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/runworkflow.png)
+![RunWorkflow](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/runworkflow.png)
 
 运行后如果不显示，刷新一下页面即可看到正在运行的 workflow。
 
-![Workflow](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/workflow.png)
+![Workflow](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/workflow.png)
 
 等到标志变成 ✅，表示已经部署成功。
 
-![Success](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/success.png)
+![Success](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/success.png)
 
 如果发现标志变成 ❌，则表示部署失败。
 
-![Failure](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/failure.png)
+![Failure](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/failure.png)
 
 可以点进这个 workflow 查看失败原因。
 
-![Failue](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/failure2.png)
+![Failue](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/failure2.png)
 
 ### 添加依赖
 
 下载[依赖文件](https://chen10.lanzouo.com/igHXzxf8wjc) ，也可以自己用 pip 下载依赖，然后打包。然后在[高级能力](https://console.cloud.tencent.com/scf/layer)新建`层`
 
-![Layer](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/layer.png)
+![Layer](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/layer.png)
 
 `层名称`可以自己任意填写，然后上传刚刚下载的压缩包，点击`添加运行环境`，选择 `Python3.6`。
 
-![Dependence](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/dependence.png)
+![Dependence](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/dependence.png)
 
 在[函数服务](https://console.cloud.tencent.com/scf/list)点进刚刚创建的函数
 
-![Function](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/function.png)
+![Function](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/function.png)
 
 点击上方的`层管理`，点击`绑定`
 
-![Bind](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/bind1.png)
+![Bind](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/bind1.png)
 
 选择刚刚创建的层。
 
-![Bind](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/bind2.png)
+![Bind](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/bind2.png)
 
 ### 修改配置
 
 在[函数服务](https://console.cloud.tencent.com/scf/list)点进刚刚创建的函数
 
-![Function](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/function.png)
+![Function](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/function.png)
 
 如果在函数服务里找不到刚刚部署的函数，先到 GitHub Actions 中确认是否部署成功。如果部署成功，则确认页面左上角的地域选择是否正确，默认地域应为广州。如果在 Secrets 中设置了 REGION，则根据自己设置的 REGION 选择相应的地域。
 
 在编辑器里点击 `config.json` 这个文件进行配置
 
-![Config](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/config.png)
+![Config](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/config.png)
 
 可以看到文件中有红色波浪线的错误提示，可以忽略不管，也可以下拉到编辑器的右下角，点击 `JSON` 来更改语言模式，选择 `JSON with Comments`，这样就可以消除错误提示。
 
-![Style](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/style.png)
+![Style](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/style.png)
 
 在 `config.json` 里进行如下的账号配置。运行之后如果发现有些任务没有完成，可能是因为没有开启，将任务对应的 `enable` 字段设置为 `true` 即可开启。
 
@@ -170,7 +170,7 @@ REGION 默认为 `ap-guangzhou` ，可选的地域详见[地域列表](https://c
 
 cookie 获取方式：首先在网页登录[网易云音乐](https://music.163.com/)，然后按 <kbd>F12</kbd> 打开开发人员工具，再按 <kbd>F5</kbd> 刷新页面，最后按照以下步骤来获取 cookie，可以只复制 `MUSIC_U` 的那部分
 
-![Cookie](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/cookie.png)
+![Cookie](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/cookie.png)
 
 #### 签到
 
@@ -651,13 +651,13 @@ cookie 获取方式：首先在网页登录[网易云音乐](https://music.163.c
 
 修改完代码后，按 ctrl+s 保存代码，然后点击编辑器右上角的`部署`（每次修改完都要重新部署），左下角的`部署`也行。部署完成后点击部署旁边的测试按钮，观察结果，如果失败则检查修改代码。
 
-![Test](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/test.png)
+![Test](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/test.png)
 
 ### 更新代码
 
 在 fork 后的 GitHub 项目页面点击 `Fetch upstream` - `Fetch and merge`
 
-![Update](https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/update.png)
+![Update](https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/update.png)
 
 此时，更新后的代码会自动部署到腾讯云函数中，可以到 `Actions` 中查看部署进度。更新后，配置文件自动同步，无需再次填写，但注释会被删除。如果需要修改配置文件，可以参考 `config.example.json` 文件中的注释，对 `config.json` 文件进行修改。进入到云函数中时，如果提醒“检测到当前工作区函数和已部署函数不一致，重新加载已部署函数?”，点击`确认`即可。
 
@@ -696,7 +696,7 @@ pip3 install requests json5 pycryptodomex
 ### 更新配置文件
 
 ```shell
-task chen310_NeteaseCloudMusicTasks/ql_update.py
+task xccado_NeteaseCloudMusicTasks/ql_update.py
 ```
 
 ### 修改配置文件
@@ -714,13 +714,13 @@ docker exec -it qinglong bash
 然后更新代码
 
 ```shell
-ql repo https://github.com/chen310/NeteaseCloudMusicTasks.git "index.py" "" "py"
+ql repo https://github.com/xccado/NeteaseCloudMusicTasks.git "index.py" "" "py"
 ```
 
 再更新配置文件
 
 ```shell
-task chen310_NeteaseCloudMusicTasks/ql_update.py
+task xccado_NeteaseCloudMusicTasks/ql_update.py
 ```
 
 每次更新完代码后一定要更新配置文件，否则可能会出错
@@ -732,7 +732,7 @@ task chen310_NeteaseCloudMusicTasks/ql_update.py
 拉取代码
 
 ```shell
-git clone https://github.com/chen310/NeteaseCloudMusicTasks.git
+git clone https://github.com/xccado/NeteaseCloudMusicTasks.git
 ```
 
 ### 安装依赖
@@ -789,7 +789,7 @@ python3 updateconfig.py config.example.json config.json config.json
 ### 下载并配置 `config.json`
 
 ```shell
-curl -fsSL -o config.json https://raw.githubusercontent.com/chen310/NeteaseCloudMusicTasks/main/config.example.json
+curl -fsSL -o config.json https://raw.githubusercontent.com/xccado/NeteaseCloudMusicTasks/main/config.example.json
 ```
 
 ### 随机时间执行
@@ -825,13 +825,13 @@ docker run -itd --restart=on-failure \
 
 ### 赞赏
 
-<p align="left">微信</p> <img width="300" height="300" src="https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/wechatpay.png" />
+<p align="left">微信</p> <img width="300" height="300" src="https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/wechatpay.png" />
 
-<p align="left">支付宝</p> <img width="300" height="300" src="https://cdn.jsdelivr.net/gh/chen310/NeteaseCloudMusicTasks/public/img/alipay.png" />
+<p align="left">支付宝</p> <img width="300" height="300" src="https://cdn.jsdelivr.net/gh/xccado/NeteaseCloudMusicTasks/public/img/alipay.png" />
 
 ### star 数
 
-[![Stargazers over time](https://starchart.cc/chen310/NeteaseCloudMusicTasks.svg)](https://starchart.cc/chen310/NeteaseCloudMusicTasks)
+[![Stargazers over time](https://starchart.cc/xccado/NeteaseCloudMusicTasks.svg)](https://starchart.cc/xccado/NeteaseCloudMusicTasks)
 
 ### 声明
 
